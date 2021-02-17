@@ -21,7 +21,6 @@ namespace ADProject.Db
 
         public void Init()
         {
-            AddTags();
             AddYK();
         }
 
