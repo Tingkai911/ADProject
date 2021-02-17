@@ -664,7 +664,7 @@ namespace ADProject.DbSeeder
         {
             string currentDir = Directory.GetCurrentDirectory();
 
-            using (var reader = new StreamReader(Path.Combine(currentDir, "Db", "FoodData.csv")))
+            using (var reader = new StreamReader(Path.Combine(currentDir, "wwwroot", "FoodData.csv")))
             {
                 while (!reader.EndOfStream)
                 {

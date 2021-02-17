@@ -35,9 +35,9 @@ namespace ADProject
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            /*            services.AddDbContext<ADProjContext>(options =>
-                            options.UseSqlServer(
-                                Configuration.GetConnectionString("DefaultConnection")));*/
+            services.AddDbContext<ADProjContext>(options =>
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddAuthentication()
                 .AddGoogle(options =>
@@ -47,8 +47,8 @@ namespace ADProject
                 });
                 
 
-            services.AddDbContext<ADProjContext>(options =>
-                options.UseSqlServer(Environment.GetEnvironmentVariable("DB_CONNECTION_STRING", EnvironmentVariableTarget.User)));
+/*            services.AddDbContext<ADProjContext>(options =>
+                options.UseSqlServer(Environment.GetEnvironmentVariable("DB_CONNECTION_STRING", EnvironmentVariableTarget.User)));*/
 
             services.AddRazorPages();
 
