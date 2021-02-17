@@ -46,6 +46,6 @@
     <form asp-action="Delete" asp-route-gobackurl="@ViewData["gobackurl"]">
         <input type="hidden" asp-for="GroupId" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-controller="@ViewData["Controller"]" asp-action="@ViewData["Action"]" asp-route-id="@ViewData["GoBackId"]">Back to List</a>
+        <a asp-controller="@ViewData["Controller"]" asp-action="@ViewData["Action"]" asp-route-id="@ViewData["GoBackId"]" asp-route-gobackurl="@ViewData["gobackurl"]">Back to List</a>
     </form>
 </div>
