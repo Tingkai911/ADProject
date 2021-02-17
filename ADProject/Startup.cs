@@ -42,8 +42,8 @@ namespace ADProject
             services.AddAuthentication()
                 .AddGoogle(options =>
                 {
-                    options.ClientId = "285372488193-u1s12juncblkh0n3en9fk26q8ei6r2sa.apps.googleusercontent.com";
-                    options.ClientSecret = "CN0pBpWFi9oxLVKEclKockDV";
+                    options.ClientId = "285372488193-fon86rhs4orf5ak5pae5s39c2kdgh3q8.apps.googleusercontent.com";
+                    options.ClientSecret = "UveLnDAXH7ip8PgRLYYjFvaf";
                 });
                 
 
