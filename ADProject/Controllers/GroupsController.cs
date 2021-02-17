@@ -292,7 +292,7 @@ namespace ADProject.Controllers
 
             if(!await _groupService.IsGroupAdmin(id, User.Identity.Name))
             {
-                return RedirectToAction("Details", new { id = id });
+                return RedirectToAction("Details", new { id = id, gobackurl = gobackurl });
             }
 
             return View(group);
@@ -312,7 +312,7 @@ namespace ADProject.Controllers
 
             if (!await _groupService.IsGroupAdmin(id, User.Identity.Name))
             {
-                return RedirectToAction("Details", new { id = id });
+                return RedirectToAction("Details", new { id = id, gobackurl = gobackurl });
             }
 
             if (group.GroupName.Trim() == "" && !ModelState.IsValid)
@@ -375,7 +375,7 @@ namespace ADProject.Controllers
 
             if (!await _groupService.IsGroupAdmin(id, User.Identity.Name))
             {
-                return RedirectToAction("Details", new { id = id });
+                return RedirectToAction("Details", new { id = id, gobackurl = gobackurl });
             }
 
             ViewData["gobackurl"] = gobackurl;
@@ -391,7 +391,7 @@ namespace ADProject.Controllers
         {
             if (!await _groupService.IsGroupAdmin(id, User.Identity.Name))
             {
-                return RedirectToAction("Details", new { id = id });
+                return RedirectToAction("Details", new { id = id, gobackurl = gobackurl });
             }
 
             var successful = await _groupService.DeleteGroup(id);

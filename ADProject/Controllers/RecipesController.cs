@@ -282,14 +282,14 @@ namespace ADProject.Controllers
 
             if (!User.Identity.Name.Equals(recipe.User.UserName))
             {
-                return RedirectToAction("Details", new { id = id });
+                return RedirectToAction("Details", new { id = id, gobackurl = gobackurl });
             }
 
             var successful = await _recipesService.DeleteRecipe(id);
             if(successful && gobackurl.Contains("Groups"))
             {
                 var urls = gobackurl.Split("/");
-                return RedirectToAction("Details", "Groups", new { id = urls[2] });
+                return RedirectToAction("Details", "Groups", new { id = urls[2], gobackurl = gobackurl });
             }
             else if(successful && gobackurl.Contains("UserProfile"))
             {
