@@ -816,6 +816,7 @@ namespace ADProject.DbSeeder
             db.Recipes.Add(new Recipe
             {
                 UserId = user.Id,
+                User = user,
                 Title = "Chocolate Cake",
                 Description = "Sweets and Tasty chocolate cake",
                 DateCreated = new DateTime(2008, 5, 1, 8, 30, 52),
@@ -959,6 +960,7 @@ namespace ADProject.DbSeeder
             db.Recipes.Add(new Recipe
             {
                 UserId = user1.Id,
+                User = user1,
                 Title = "Stuffed Apples with Figs",
                 Description = "These are drool-worthy!",
                 DateCreated = new DateTime(2013, 6, 3, 8, 30, 52),

@@ -376,7 +376,8 @@ namespace ADProject.Controllers
             tempAllergenTags tempAlTags = JsonConvert.DeserializeObject<tempAllergenTags>(allergens);
             if (tempAlTags.allergens != null)
             {
-                Debug.WriteLine(tempAlTags.allergens[0]);
+/*                Debug.WriteLine(tempAlTags.allergens[0]);
+*/                
                 for (int i = 0; i < tempAlTags.allergens.Count; i++)
                 {
                     tags.Add(new RecipeTag

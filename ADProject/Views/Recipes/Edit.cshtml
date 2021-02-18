@@ -582,6 +582,8 @@
                     if (this.status === 200) {
                         const { tags } = JSON.parse(this.response);
                         callback(tags);
+                        console.log(JSON.parse(tags));
+                        alert(`A total of ${JSON.parse(tags).length} Allergen tags are generated`)
                     } else {
                         alert("Error generate tags");
                     }

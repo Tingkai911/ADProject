@@ -34,7 +34,10 @@
                     <div class="bottom-left">
                         @for (int i = 0; i < 3 && i < recipe.Recipe.RecipeTags.Count(); i++)
                         {
-                            <span>#</span>@recipe.Recipe.RecipeTags[i].Tag.TagName<span> </span>
+                            if (recipe.Recipe.RecipeTags[i].IsAllergenTag == false)
+                            {
+                                <span>#</span>@recipe.Recipe.RecipeTags[i].Tag.TagName<span> </span>
+                            }
                         }
                     </div>
                 </a>

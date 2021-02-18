@@ -27,6 +27,10 @@ namespace ADProject.GenerateTagsClass
         public string GetAllergenTag(List<RecipeIngredient> recipeIngredients)
         {
             string uirWebAPI = "http://recipe4menlp-env.eba-zsgvuj5a.ap-southeast-1.elasticbeanstalk.com/api/allergentags";
+
+
+            /*            string uirWebAPI = "http://127.0.0.1:5000/api/allergentags";
+            */
             string webResponse = string.Empty;
 
 
@@ -79,10 +83,10 @@ namespace ADProject.GenerateTagsClass
             Debug.WriteLine(webResponse);
 
             tempAllergenTags tempAlTags = JsonConvert.DeserializeObject<tempAllergenTags>(webResponse);
-            if (tempAlTags.allergens != null)
+/*            if (tempAlTags.allergens != null)
             {
                 Debug.WriteLine(tempAlTags.allergens[0]);
-            }
+            }*/
 
             return webResponse;
 
