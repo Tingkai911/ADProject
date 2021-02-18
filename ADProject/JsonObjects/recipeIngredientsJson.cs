@@ -10,5 +10,9 @@ namespace ADProject.JsonObjects
     {
         public recipeIngredientsJson() { }
         public List<string> ingredients { get; set; }
+
+        public List<string> corpus_allergen { get; set; }
+
+        public List<string> corpus_ingredient { get; set; }
     }
 }

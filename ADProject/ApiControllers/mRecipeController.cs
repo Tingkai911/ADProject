@@ -175,7 +175,7 @@ namespace ADProject.ApiControllers
         {
             Debug.Write("Reached generate A Tags");
 
-            GenerateTag trial = new GenerateTag(_recipesService);
+            GenerateTag trial = new GenerateTag(_recipesService, _context);
 
             string allergens = trial.GetAllergenTag(recipeIngredients);
 

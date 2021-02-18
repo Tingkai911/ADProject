@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 
 namespace ADProject.Controllers
 {
-    [Route("api/[controller]")]
+/*    [Route("api/[controller]")]
     [ApiController]
     public class TagController : ControllerBase
     {
@@ -95,5 +95,5 @@ namespace ADProject.Controllers
         public void Delete(int id)
         {
         }
-    }
+    }*/
 }

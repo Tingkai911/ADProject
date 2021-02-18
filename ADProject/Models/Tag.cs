@@ -24,8 +24,8 @@ namespace ADProject.Models
         public int TagId { get; set; }
         [Required]
         [Column("tagName")]
-        [StringLength(30)]
-        public string TagName { get; set; }
+/*        [StringLength(30)]
+*/        public string TagName { get; set; }
         [Required]
         [Column("warning")]
         [StringLength(200)]
