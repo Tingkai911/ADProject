@@ -205,6 +205,8 @@ namespace ADProject.Service
 
         public async Task<Recipe> GetRecipeById(int? id)
         {
+            await Task.Delay(1000);
+
             var recipe = await _context.Recipes
                 .Include(r => r.User)
                 .Include(r => r.RecipeSteps)
